@@ -1,6 +1,10 @@
+import './Footer.css';
+
 const Footer = () => {
     return (
-        <div className="Footer"></div>
+        <div className="Footer">
+            <p>FraCav99 © {new Date().getFullYear()}</p>
+        </div>
     );
 }
 
