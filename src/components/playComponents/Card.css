@@ -1,0 +1,40 @@
+.Card {
+  width: 259px;
+  height: 317px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Card .pic-container {
+  background-color: #ccc;
+  height: 70%;
+  border-radius: 10px 10px 0 0;
+}
+
+.Card .description-container {
+  background-color: #ffde59;
+  height: 30%;
+  border-radius: 0 0 10px 10px;
+}
+
+.Card .description-container .hero-name,
+.hero-alias {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card .description-container .hero-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+  .Card {
+    width: 90%;
+  }
+  .Card:nth-child(2) {
+    margin: 20px 0;
+  }
+}

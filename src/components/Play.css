@@ -1,0 +1,22 @@
+.Play {
+  height: 80vh;
+}
+
+.Play .scoreboard-container {
+  display: flex;
+  align-items: center;
+  height: 20vh;
+}
+
+.Play .cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
+}
+
+@media screen and (max-width: 800px) {
+  .Play .cards-container {
+    flex-direction: column;
+  }
+}
