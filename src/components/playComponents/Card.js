@@ -5,10 +5,7 @@ const Card = ({charId, charImage, charAlias, charName, getCardId}) => {
         <div className="Card" id={charId} onClick={ev => getCardId(ev)}>
             <div 
                 className="pic-container"
-                style={{
-                    backgroundImage: `url(${charImage})`,
-                    backgroundSize: '100% 100%'
-                }}
+                style={{backgroundImage: `url(${charImage})`}}
             ></div>
             <div className="description-container">
                 <p className="hero-name">{charName || charId}</p>

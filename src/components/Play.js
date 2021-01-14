@@ -6,19 +6,29 @@ import './Play.css'
 const Play = () => {
     const [currentHeroes, setCurrentHeroes] = useState([]);
     const [heroesSequence, setHeroesSequence] = useState([]);
+    const [score, setScore] = useState(0);
+    const [bestScore, setBestScore] = useState(0);
 
     const randomInteger = (max, min) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    const getCardId = (ev) => {
+    const checkHeroesSequence = (ev) => {
         const id = ev.target.parentNode.id;
-        setHeroesSequence([...heroesSequence, id]);
+        if (!heroesSequence.includes(id)) {
+            setHeroesSequence([...heroesSequence, id]);
+            setScore(score + 1);
+            bestScore <= score && setBestScore(bestScore + 1); 
+        } else {
+            setHeroesSequence([]);
+            setScore(0);
+        }
     }
 
     useEffect(() => {
         (async () => {
             const currentCharctersArr = [];
+            const currentHeroesIds = [];
             let i = 0;
             while (i < 3) {
                 const randomPage = randomInteger(1, 16);
@@ -28,8 +38,9 @@ const Play = () => {
                 const currentCharacter = formattedResponse.result[randomCharacter];
 
                 // Avoid duplication of the same card in the current cards array
-                if (!currentCharctersArr.includes(currentCharacter)) {
+                if (!currentHeroesIds.includes(currentCharacter.id)) {
                     currentCharctersArr.push(currentCharacter);
+                    currentHeroesIds.push(currentCharacter.id);
                     i++;
                 }
             }
@@ -41,7 +52,7 @@ const Play = () => {
     return (
         <div className="Play">
             <div className="scoreboard-container">
-                <ScoreBoard />
+                <ScoreBoard score={score} bestScore={bestScore}/>
             </div>
             <div className="cards-container">
                 {currentHeroes.map((item, index) => {
@@ -52,7 +63,7 @@ const Play = () => {
                             charImage={item.images[item.images.length - 1]}
                             charAlias={item.alias}
                             charName={item.name}
-                            getCardId={getCardId}
+                            getCardId={checkHeroesSequence}
                         />
                     );
                 })}
