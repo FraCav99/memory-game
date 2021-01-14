@@ -1,14 +1,18 @@
 import './Card.css';
 
-const Card = () => {
+const Card = ({charId, charImage, charAlias, charName, getCardId}) => {
     return (
-        <div className="Card">
-            <div className="pic-container">
-                <img src="" alt="hero-pic" />
-            </div>
+        <div className="Card" id={charId} onClick={ev => getCardId(ev)}>
+            <div 
+                className="pic-container"
+                style={{
+                    backgroundImage: `url(${charImage})`,
+                    backgroundSize: '100% 100%'
+                }}
+            ></div>
             <div className="description-container">
-                <p className="hero-name">Hero Name</p>
-                <p className="hero-alias">Hero Alias</p>
+                <p className="hero-name">{charName || charId}</p>
+                <p className="hero-alias">{charAlias}</p>
             </div>
         </div>
     );

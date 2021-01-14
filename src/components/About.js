@@ -25,7 +25,9 @@ const About = () => {
                                 Renant
                             </a>
                         </span>
-                        <p><a className="link-to-api" href="https://myheroacademiaapi.com/">Link to API</a></p>
+                    </p>
+                    <p>
+                        <a className="link-to-api" href="https://myheroacademiaapi.com/" target="blank">Link to API</a>
                     </p>
                 </div>
             </div>
