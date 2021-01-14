@@ -36,7 +36,7 @@
 
 @media screen and (max-width: 800px) {
   .Card {
-    width: 90%;
+    width: 70%;
   }
   .Card:nth-child(2) {
     margin: 20px 0;
