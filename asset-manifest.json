@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/memory-game/static/css/main.2ae8ac68.chunk.css",
-    "main.js": "/memory-game/static/js/main.373a9553.chunk.js",
-    "main.js.map": "/memory-game/static/js/main.373a9553.chunk.js.map",
+    "main.css": "/memory-game/static/css/main.e95d2b21.chunk.css",
+    "main.js": "/memory-game/static/js/main.886a3da5.chunk.js",
+    "main.js.map": "/memory-game/static/js/main.886a3da5.chunk.js.map",
     "runtime-main.js": "/memory-game/static/js/runtime-main.c2a72957.js",
     "runtime-main.js.map": "/memory-game/static/js/runtime-main.c2a72957.js.map",
     "static/js/2.45b2d03c.chunk.js": "/memory-game/static/js/2.45b2d03c.chunk.js",
     "static/js/2.45b2d03c.chunk.js.map": "/memory-game/static/js/2.45b2d03c.chunk.js.map",
     "index.html": "/memory-game/index.html",
-    "static/css/main.2ae8ac68.chunk.css.map": "/memory-game/static/css/main.2ae8ac68.chunk.css.map",
+    "static/css/main.e95d2b21.chunk.css.map": "/memory-game/static/css/main.e95d2b21.chunk.css.map",
     "static/js/2.45b2d03c.chunk.js.LICENSE.txt": "/memory-game/static/js/2.45b2d03c.chunk.js.LICENSE.txt",
     "static/media/Boku_no_Hero_Academia_Logo.1292fcc2.png": "/memory-game/static/media/Boku_no_Hero_Academia_Logo.1292fcc2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c2a72957.js",
     "static/js/2.45b2d03c.chunk.js",
-    "static/css/main.2ae8ac68.chunk.css",
-    "static/js/main.373a9553.chunk.js"
+    "static/css/main.e95d2b21.chunk.css",
+    "static/js/main.886a3da5.chunk.js"
   ]
 }
