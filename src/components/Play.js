@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react';
 import ScoreBoard from './playComponents/ScoreBoard';
 import Card from './playComponents/Card';
-import './Play.css'
+import './Play.css';
+import bokuNoHeroLogo from '../images/Boku_no_Hero_Academia_Logo.png';
 
 const Play = () => {
     const [currentHeroes, setCurrentHeroes] = useState([]);
@@ -48,6 +49,17 @@ const Play = () => {
             setCurrentHeroes(currentCharctersArr);
         })(); 
     }, [heroesSequence]);
+
+    if (currentHeroes.length === 0) {
+        return <div className="Play">
+            <div className="loader-container">
+                <div className="image-container">
+                    <img src={bokuNoHeroLogo} alt="bokunohero-logo" />
+                </div>
+                <h1>Loading...</h1>
+            </div>
+        </div>
+    }
 
     return (
         <div className="Play">

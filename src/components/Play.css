@@ -15,6 +15,29 @@
   height: 60vh;
 }
 
+.Play .loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Play .loader-container h1 {
+  color: white;
+}
+
+.Play .loader-container .image-container {
+  width: 300px;
+  height: 100px;
+}
+
+.Play .loader-container .image-container img {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 800px) {
   .Play .cards-container {
     flex-direction: column;
